@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Кондо в Бангкоке</title>
+<style>
+:root{--bg:#f6f4ef;--card:#fff;--ink:#1d1d1b;--mut:#6b6a66;--line:#e4e0d6;--ok:#2f7d4f;--okb:#e3f2e8;--warn:#a86a00;--warnb:#fbefd6;--bad:#b23b3b;--badb:#f8e1e1;--acc:#1f5f8b}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141413;--card:#1e1e1c;--ink:#ecebe6;--mut:#9b9a94;--line:#33322e;--okb:#183526;--warnb:#3a2e12;--badb:#3d1c1c;--ok:#6cc68f;--warn:#e0a640;--bad:#e57373;--acc:#6aaee0}}
+:root[data-theme="dark"]{--bg:#141413;--card:#1e1e1c;--ink:#ecebe6;--mut:#9b9a94;--line:#33322e;--okb:#183526;--warnb:#3a2e12;--badb:#3d1c1c;--ok:#6cc68f;--warn:#e0a640;--bad:#e57373;--acc:#6aaee0}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:1180px;margin:0 auto;padding:24px 16px 60px}
+h1{font-size:26px;margin:0 0 4px}
+.sub{color:var(--mut);margin:0 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-bottom:22px}
+.tip{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.tip b{display:block;margin-bottom:4px}
+.tip p{margin:0;color:var(--mut);font-size:14px}
+.top{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-bottom:26px}
+.pick{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--ok);border-radius:12px;padding:14px}
+.pick h3{margin:0 0 2px;font-size:16px}
+.pick .m{color:var(--mut);font-size:13px;margin-bottom:6px}
+.pick .p{font-size:20px;font-weight:600}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0 12px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:6px 12px;cursor:pointer;font:inherit;font-size:14px}
+.chip.on{background:var(--acc);border-color:var(--acc);color:#fff}
+label.ck{display:flex;gap:6px;align-items:center;font-size:14px;color:var(--mut);margin-left:6px}
+.tbl{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;min-width:980px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;font-size:14px}
+th{position:sticky;top:0;background:var(--card);font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--mut);cursor:pointer;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.n b{display:block}
+td.n small{color:var(--mut)}
+.b{display:inline-block;border-radius:6px;padding:1px 7px;font-size:12px;font-weight:600;white-space:nowrap;margin:1px 2px 1px 0}
+.ok{background:var(--okb);color:var(--ok)}.wa{background:var(--warnb);color:var(--warn)}.ba{background:var(--badb);color:var(--bad)}
+.score{font-weight:700;font-size:16px}
+a{color:var(--acc)}
+.note{color:var(--mut);font-size:13px}
+h2{font-size:18px;margin:28px 0 10px}
+ul.rej{margin:0;padding-left:18px;color:var(--mut)}
+.foot{margin-top:24px;color:var(--mut);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Кондо в Бангкоке: зал + сауна у метро</h1>
+<p class="sub">Требования: зал и сауна в здании (парилка/джакузи — плюс), до BTS/MRT/лодки ≤15 мин пешком, 1BR ≈ 16–30k ฿. Учтены советы Евгения про смог и затопления. Обновлено 10.11.2026.</p>
+
+<div class="grid">
+ <div class="tip"><b>🌫 Смог (январь–апрель)</b><p>PM2.5 — это общая проблема всего города. Высокий этаж (25+) и очиститель с HEPA-фильтром помогают больше, чем выбор района. Колонка «Этажей» показывает, можно ли там вообще взять высокий этаж.</p></div>
+ <div class="tip"><b>🌊 Затопления (май–октябрь)</b><p>Правило «≤300 м до станции»: эстакады BTS не затапливает. Зелёная метка — до станции 300 м и ближе. Дома, до которых добираться через переулки или на мототакси, получают штраф.</p></div>
+ <div class="tip"><b>🏞 Khlong San / Riverside</b><p>Совет друга подтвердился: Villa Sathorn и Q House стоят в ~60 м от BTS Krung Thon Buri, однушки 40–59 м² за 15–21k. Бриз с реки немного помогает, но от смога не спасает: высокий этаж и HEPA всё равно нужны.</p></div>
+</div>
+
+<h2>Лучшие варианты</h2>
+<div class="top" id="top"></div>
+
+<h2>Все кондо</h2>
+<div class="controls" id="areas"></div>
+<div class="controls">
+ <label class="ck"><input type="checkbox" id="fBudget" checked> только ≤30k</label>
+ <label class="ck"><input type="checkbox" id="fSauna"> сауна подтверждена (2+ источника)</label>
+ <label class="ck"><input type="checkbox" id="fFlood"> ≤300 м до станции</label>
+</div>
+<div class="tbl"><table>
+<thead><tr>
+ <th data-k="score">Балл</th><th data-k="name">Кондо / адрес</th><th data-k="dist">Транспорт</th><th>Удобства</th>
+ <th data-k="floors">Этажей / год</th><th data-k="sqm">1BR м²</th><th data-k="rmin">฿/мес</th><th>Заметка</th>
+</tr></thead>
+<tbody id="rows"></tbody>
+</table></div>
+
+<h2>Отброшены</h2>
+<ul class="rej">
+ <li><b>The Breeze Narathiwas</b> — сауны нет ни в одном источнике, ближе всего BRT, до BTS Chong Nonsi далеко.</li>
+ <li><b>The Fourwings Residence</b> — сауна только в платном клубе, здание 2007 года, далеко от центра.</li>
+ <li>Далеко от метро: Supalai Place 39, Holme Ekkamai 22, Rhythm Ekkamai Estate, Resorta Yen-Akat, The FINE Thonglor, Mori Haus, Bangkok Horizon Sathorn, Ivy River.</li>
+ <li>Нет сауны: Centric Sathorn-Saint Louis, Ideo Mix Phaholyothin, Aspire Sukhumvit-Rama 4, Nye by Sansiri.</li>
+ <li>Дорого (40k+): Noble Ploenchit, Saladaeng One, Supalai Icon Sathorn, The XXXIX, The Estelle, The River (Raimon Land).</li>
+</ul>
+
+<p class="foot">⚠ Данные взяты из объявлений агрегаторов (thailand-property, FazWaz, PropertyScout, Lazudi). Страницы целиком не открывались, цены — запрашиваемые. Перед просмотром проверьте сауну у juristic office и расстояние до станции по Google Maps. Перед подписанием спросите про TM30, тариф за электричество и common fee.</p>
+</div>
+
+<script>
+const D=[
+{n:"Villa Sathorn",a:"Charoen Nakhon Rd, Khlong San",ar:"Khlong San",t:"BTS Krung Thon Buri",d:60,s:2,st:0,j:0,y:2009,f:40,sq:"43–59",r:[17,21],nt:"Риверсайд, у самой станции, большие однушки дёшево",u:"https://www.thailand-property.com/condo/2516/villa-sathorn"},
+{n:"Q House Sathorn",a:"Krung Thon Buri Rd, Khlong San",ar:"Khlong San",t:"BTS Krung Thon Buri",d:65,s:2,st:0,j:1,y:2009,f:35,sq:"40–48",r:[15,21],nt:"Одна FazWaz-страница даёт 1.9 км — выброс, проверить на карте",u:"https://www.thailand-property.com/condo/1945/q-house-condo-sathorn"},
+{n:"Urbano Absolute Sathon-Taksin",a:"Charoen Nakhon Rd, Khlong San",ar:"Khlong San",t:"BTS Krung Thon Buri",d:500,s:2,st:1,j:0,y:2012,f:40,sq:"?",r:[null,null],nt:"Инфинити-бассейн; цены и метраж не нашлись",u:"https://www.thailand-property.com/condo/2494/urbano-absolute-sathon-taksin"},
+{n:"Chapter Charoennakorn-Riverside",a:"Charoen Nakhon Rd, Khlong San",ar:"Khlong San",t:"Gold Line / BTS Krung Thon Buri",d:null,s:2,st:2,j:0,on:1,y:2022,f:45,sq:"~32",r:[23,23],nt:"Новый, есть онсэн, но однушки маленькие",u:"https://www.thailand-property.com/condo/14280/chapter-charoennakhorn-riverside"},
+{n:"Ideo Sathorn-Wongwianyai",a:"14 Soi Mana Witthaya, Khlong San",ar:"Khlong San",t:"BTS Wongwian Yai",d:null,s:1,st:1,j:0,y:2020,f:28,sq:"?",r:[15,29],nt:"Сауна по одному источнику",u:"https://lazudi.com/th-en/bangkok/project/ideo-sathorn-wongwian-yai-1204"},
+{n:"Menam Residences",a:"3 Charoen Krung Rd (берег Бангкока)",ar:"Khlong San",t:"Причал Asiatique",d:300,s:2,st:2,j:0,on:1,y:null,f:54,sq:"45–50",r:[24,35],nt:"Инфинити у реки, онсэн; до BTS далеко, только лодка",u:"https://www.thailand-property.com/new-home/10732/menam-residences"},
+{n:"Watermark Chaophraya",a:"41 Soi Charoen Nakhon 39",ar:"Khlong San",t:"Причал (расст. ?)",d:null,s:2,st:2,j:0,y:null,f:52,sq:"95",r:[37,37],nt:"Премиум: 95 м² за 37k, 3 бассейна",u:"https://www.thailand-property.com/condo/18002/watermark-chaophraya"},
+{n:"Sky Walk Residences",a:"1599 Sukhumvit Rd, Phra Khanong",ar:"Phra Khanong / Ekkamai",t:"BTS Phra Khanong",d:250,s:2,st:0,j:0,y:2012,f:50,sq:"40–52",r:[22,32],nt:"50 этажей, инфинити; ближе всего к вашему отелю",u:"https://www.thailand-property.com/ads/1-bedroom-condo-for-rent-in-sky-walk-condominium-phra-khanong-nuea-bangkok-near-bts-phra-khanong_bde024ccfdf9-0960-5992-76c8-6d7cc089"},
+{n:"Rhythm Sukhumvit 50",a:"Soi Sukhumvit 50, Phra Khanong",ar:"Phra Khanong / Ekkamai",t:"BTS On Nut",d:240,s:2,st:1,j:0,y:2013,f:37,sq:"~45",r:[25,30],nt:"Раздельные сауны для мужчин и женщин",u:"https://www.thailand-property.com/ads/1-bedroom-condo-for-sale-or-rent-in-rhythm-sukhumvit-50-phra-khanong-bangkok-near-bts-on-nut_7b49cbd2638c-2311-6f52-6c58-fba0c089"},
+{n:"The Lofts Ekkamai",a:"1413 Sukhumvit Rd (Soi 63–65)",ar:"Phra Khanong / Ekkamai",t:"BTS Ekkamai",d:180,s:2,st:2,j:2,y:2017,f:28,sq:"45",r:[33,33],nt:"Полный набор: сауна, парилка, джакузи",u:"https://www.thailand-property.com/ads/1-bedroom-condo-for-rent-in-the-lofts-ekkamai-phra-khanong-bangkok-near-bts-ekkamai_0d48c572b5f4-ddae-32b6-ef26-caa97e6c"},
+{n:"Aspire Rama 4",a:"4288 Rama 4 Rd",ar:"Phra Khanong / Ekkamai",t:"BTS Ekkamai",d:800,s:2,st:0,j:0,y:2011,f:null,sq:"~35",r:[15.5,22],nt:"Дёшево, но до станции далековато",u:"https://www.thailand-property.com/ads/1-bedroom-condo-for-rent-in-aspire-rama-4-phra-khanong-bangkok-near-bts-ekkamai_064f2b07e472-ef41-f132-39b2-dc85b089"},
+{n:"Sukhumvit Plus",a:"Soi Sukhumvit Plus 2 (Rama 4)",ar:"Phra Khanong / Ekkamai",t:"BTS Phra Khanong",d:210,s:1,st:0,j:0,y:2005,f:null,sq:"40–45",r:[15,17],nt:"Самое дешёвое у BTS; сауну проверить",u:"https://www.thailand-property.com/ads/1-bedroom-condo-for-rent-in-sukhumvit-plus-phra-khanong-bangkok-near-bts-phra-khanong_42ef5e8f3b5e-827e-f432-7f40-88f6b089"},
+{n:"Hyde Sukhumvit 13",a:"Soi Sukhumvit 13, Khlong Toei Nuea",ar:"Asok / Nana / Phrom Phong",t:"BTS Nana (skywalk?)",d:250,s:2,st:2,j:2,y:2014,f:40,sq:"45–48",r:[25,38],nt:"Всё есть, крытый переход к BTS (1 источник); рядом шумная Nana",u:"https://propertyscout.co.th/en/1-br-condo-hyde-sukhumvit-13-condominium-near-bts-nana-1960032/"},
+{n:"Edge Sukhumvit 23",a:"6 Sukhumvit Soi 23",ar:"Asok / Nana / Phrom Phong",t:"BTS Asok / MRT Sukhumvit",d:300,s:2,st:2,j:0,y:2016,f:36,sq:"31–33",r:[25,28],nt:"Однушки меньше 35 м²",u:"https://www.fazwaz.com/property-rent/1-bedroom-condo-for-rent-at-edge-sukhumvit-23-in-khlong-toei-nuea-bangkok-u6762535"},
+{n:"Life Rama 4-Asoke",a:"Rama 4 Rd, Khlong Toei",ar:"Asok / Nana / Phrom Phong",t:"MRT QSNCC",d:480,s:1,st:0,j:2,y:2024,f:39,sq:"?",r:[21,null],nt:"Новый, рядом парк Benjakitti; в основном студии",u:"https://www.thailand-property.com/condo/18499/life-rama-4-asoke"},
+{n:"Park Origin Phrom Phong",a:"Soi Sukhumvit 24",ar:"Asok / Nana / Phrom Phong",t:"BTS Phrom Phong",d:700,s:2,st:0,j:2,y:2017,f:51,sq:"29–40",r:[18,30],nt:"Бассейн на 50-м этаже; искать юнит от 35 м²",u:"https://www.fazwaz.com/property-rent/1-bedroom-condo-for-rent-at-park-origin-phrom-phong-in-khlong-tan-bangkok-u6821818"},
+{n:"The Waterford Diamond",a:"758 Sukhumvit 30/1",ar:"Asok / Nana / Phrom Phong",t:"BTS Phrom Phong",d:640,s:2,st:0,j:0,y:1998,f:46,sq:"52–62",r:[25,30],nt:"Старое здание, зато квартиры большие",u:"https://www.fazwaz.com/projects/thailand/bangkok/khlong-toei/khlong-tan/the-waterford-diamond"},
+{n:"Life @ Sathorn 10",a:"Soi Sathorn 10, Silom",ar:"Silom / Sathorn",t:"BTS Saint Louis",d:270,s:2,st:1,j:0,y:2010,f:27,sq:"40–48",r:[17,25],nt:"Лучшая цена в Sathorn",u:"https://www.thailand-property.com/condo/1637/life-sathorn-10"},
+{n:"Baan Siri Silom",a:"3 Si Wiang Rd, Silom",ar:"Silom / Sathorn",t:"BTS Surasak",d:300,s:2,st:0,j:0,y:2006,f:25,sq:"51–61",r:[22,35],nt:"Старое, но ухоженное",u:"https://www.thailand-property.com/condo/1167/baan-siri-silom"},
+{n:"Silom City Resort",a:"Soi Phiphat, Silom",ar:"Silom / Sathorn",t:"BTS Chong Nonsi",d:480,s:2,st:0,j:0,y:2008,f:8,sq:"44–56",r:[19,21.5],nt:"Невысокий дом (около 8 этажей); зал старый",u:"https://thailand-property.com/condo/2102/silom-city-resort"},
+{n:"Rhythm Sathorn-Narathiwas",a:"Narathiwas Rd",ar:"Silom / Sathorn",t:"BTS Chong Nonsi",d:690,s:2,st:0,j:0,y:2013,f:null,sq:"35–39",r:[20,20],nt:"",u:"https://www.thailand-property.com/condo/2010/rhythm-sathorn-narathiwas"},
+{n:"M Silom",a:"Narathiwas Soi 2, Silom",ar:"Silom / Sathorn",t:"BTS Chong Nonsi",d:500,s:2,st:2,j:2,y:2012,f:53,sq:"46–57",r:[38,38],nt:"Полный набор, но выше бюджета",u:"https://www.thailand-property.com/condo/1708/m-silom"},
+{n:"The Address Sathorn",a:"район Soi Sathorn 12",ar:"Silom / Sathorn",t:"BTS Chong Nonsi",d:450,s:2,st:1,j:2,y:2011,f:null,sq:"46–56",r:[33,37],nt:"",u:"https://thailand-property.com/condo/2231/the-address-sathorn"},
+{n:"Noble Around Ari",a:"308/1 Phaholyothin Rd",ar:"Ari",t:"BTS Ari",d:150,s:2,st:0,j:2,y:2023,f:39,sq:"35",r:[25,25],nt:"Самый новый, у самой станции",u:"https://lazudi.com/th-en/bangkok/project/noble-around-ari-1859"},
+{n:"Centric Ari Station",a:"Phahonyothin, Ari",ar:"Ari",t:"BTS Ari",d:290,s:2,st:2,j:0,y:2015,f:30,sq:"35",r:[22,22],nt:"Лучшая цена в Ari",u:"https://www.thailand-property.com/condo/1280/centric-ari-station"},
+{n:"Ideo Phaholyothin Chatuchak",a:"1639/80 Phaholyothin Rd",ar:"Ari",t:"BTS Saphan Khwai",d:270,s:2,st:0,j:1,y:2018,f:35,sq:"35–51",r:[20,25],nt:"Один источник даёт 800 м — проверить",u:"https://www.thailand-property.com/condo/12368/ideo-phaholyothin-chatujak"},
+{n:"The Reserve Phahol-Pradipat",a:"243 Pradiphat Rd",ar:"Ari",t:"BTS Saphan Khwai",d:480,s:2,st:2,j:0,y:2019,f:25,sq:"35–37",r:[21,24],nt:"",u:"https://www.thailand-property.com/condo/12414/the-reserve-phahol-pradipat"},
+{n:"Rhythm Phahol-Ari",a:"Phaholyothin Rd",ar:"Ari",t:"BTS Saphan Khwai",d:600,s:2,st:1,j:0,y:2012,f:53,sq:"45",r:[18,24],nt:"53 этажа, 45 м² дёшево",u:"https://thailand-property.com/condo/2008/rhythm-phahol-ari"},
+{n:"Life @ Phahon-Ari",a:"1411/6 Phahon Yothin Rd",ar:"Ari",t:"BTS Saphan Khwai",d:500,s:2,st:1,j:1,y:2008,f:null,sq:"31–45",r:[13,27],nt:"Дёшево, старое",u:"https://thailand-property.com/condo/1632/life-phahon-ari"},
+{n:"Klass Langsuan",a:"31/1 Lang Suan Rd",ar:"Chidlom / Langsuan",t:"BTS Chit Lom",d:400,s:2,st:0,j:2,y:2015,f:8,sq:"45",r:[36,40],nt:"Единственный вариант в Langsuan, но 8 этажей и дорого",u:"https://www.fazwaz.com/projects/thailand/bangkok/pathum-wan/lumphini/klass-langsuan"}
+];
+const AREAS=["Все",...new Set(D.map(x=>x.ar))];
+let area="Все",sortK="score",asc=false;
+function score(x){
+ let p=0;
+ p+= x.s===2?3:x.s===1?1:0;
+ p+= x.d==null?0:x.d<=300?3:x.d<=600?2:x.d<=1100?0:-2;
+ p+= x.f==null?0:x.f>=30?2:x.f>=25?1:x.f<15?-1:0;
+ p+= x.r[0]==null?0:x.r[0]<=25?2:x.r[0]<=30?1:-1;
+ const big=parseInt((x.sq||"").replace(/[^\d].*$/,""))||0;
+ p+= big>=40?1:big&&big<35?-1:0;
+ p+= (x.st?0.5:0)+(x.j?0.5:0)+(x.on?0.5:0);
+ return Math.round(p*10)/10;
+}
+D.forEach(x=>{x.score=score(x);x.dist=x.d??9999;x.floors=x.f??0;x.rmin=x.r[0]??999;x.sqm=parseInt(x.sq)||0;x.name=x.n});
+const lvl=(v,map)=>`<span class="b ${map[v]?.[0]||'wa'}">${map[v]?.[1]||'?'}</span>`;
+function row(x){
+ const tr=x.d==null?`<span class="b wa">? м</span>`:`<span class="b ${x.d<=300?'ok':x.d<=600?'wa':'ba'}">${x.d} м</span>`;
+ const fl=x.f==null?`<span class="b wa">?</span>`:`<span class="b ${x.f>=25?'ok':x.f>=15?'wa':'ba'}">${x.f} эт.</span>`;
+ const sa=lvl(x.s,{2:['ok','сауна ✓✓'],1:['wa','сауна ✓'],0:['ba','нет сауны']});
+ const ex=[x.st?`<span class="b ${x.st===2?'ok':'wa'}">парилка</span>`:'',x.j?`<span class="b ${x.j===2?'ok':'wa'}">джакузи</span>`:'',x.on?`<span class="b ok">онсэн</span>`:''].join('');
+ const pr=x.r[0]==null?'?':x.r[1]&&x.r[1]!==x.r[0]?`${x.r[0]}–${x.r[1]}k`:`${x.r[0]}k${x.r[1]?'':'+'}`;
+ return `<tr><td class="score">${x.score}</td><td class="n"><b><a href="${x.u}" target="_blank">${x.n}</a></b><small>${x.a}</small></td><td>${x.t}<br>${tr}</td><td>${sa}${ex}</td><td>${fl}<br><small class="note">${x.y??'?'}</small></td><td>${x.sq}</td><td><b>${pr}</b></td><td class="note">${x.nt}</td></tr>`;
+}
+function render(){
+ const b=fBudget.checked,s=fSauna.checked,f=fFlood.checked;
+ let L=D.filter(x=>(area==="Все"||x.ar===area)&&(!b||x.rmin<=30)&&(!s||x.s===2)&&(!f||(x.d!=null&&x.d<=300)));
+ L.sort((a,c)=>{const A=a[sortK],C=c[sortK];return (A>C?1:A<C?-1:0)*(asc?1:-1)});
+ rows.innerHTML=L.map(row).join('')||'<tr><td colspan="8" class="note">Ничего не подходит под фильтры</td></tr>';
+ areas.innerHTML=AREAS.map(a=>`<button class="chip ${a===area?'on':''}" data-a="${a}">${a}</button>`).join('');
+}
+areas.onclick=e=>{if(e.target.dataset.a){area=e.target.dataset.a;render()}};
+[fBudget,fSauna,fFlood].forEach(c=>c.onchange=render);
+document.querySelectorAll('th[data-k]').forEach(th=>th.onclick=()=>{const k=th.dataset.k;asc=sortK===k?!asc:(k==='name'||k==='dist'||k==='rmin');sortK=k;render()});
+const PICKS=[
+ ["Villa Sathorn","Риверсайд, 60 м до BTS, 40 этажей. Большие однушки дешевле всего."],
+ ["Sky Walk Residences","50 этажей, 250 м до BTS, ближе всего к вашему отелю."],
+ ["Noble Around Ari","Новый дом 2023 года, 150 м до BTS, джакузи. Ari — тихий район."],
+ ["Life @ Sathorn 10","270 м до BTS, 40–48 м² от 17k, деловой центр рядом."],
+ ["Rhythm Sukhumvit 50","240 м до On Nut, 37 этажей, раздельные сауны."],
+ ["Hyde Sukhumvit 13","Всё есть, 40 этажей, к BTS ведёт крытый переход. Но дорого и шумная Nana."]
+];
+document.getElementById('top').innerHTML=PICKS.map(([n,w])=>{const x=D.find(d=>d.n===n);const pr=x.r[1]&&x.r[1]!==x.r[0]?`${x.r[0]}–${x.r[1]}k ฿`:`${x.r[0]}k ฿`;return `<div class="pick"><h3><a href="${x.u}" target="_blank">${n}</a></h3><div class="m">${x.ar} · ${x.t} ${x.d} м · ${x.f} эт. · ${x.sq} м²</div><div class="p">${pr}</div><div class="note">${w}</div></div>`}).join('');
+render();
+</script>
+</body>
+</html>
